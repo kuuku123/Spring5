@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+dependencies {
+	implementation misc.groovy
+	implementation project(':chapter03:bean-inheritance')
+}
+
+jar {
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch4.GroovyConfig",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}

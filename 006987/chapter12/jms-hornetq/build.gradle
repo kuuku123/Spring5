@@ -1,0 +1,15 @@
+dependencies {
+	implementation spring.jms, misc.jms, misc.hornetq
+
+	testImplementation spring.test
+}
+
+jar {
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch12.JmsHornetQDemo",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}
+

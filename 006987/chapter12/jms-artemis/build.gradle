@@ -1,0 +1,15 @@
+dependencies {
+	implementation spring.jms, misc.jms, misc.artemisClient
+
+	testImplementation spring.test
+}
+
+jar {
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch12.JmsArtemisDemo",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}
+

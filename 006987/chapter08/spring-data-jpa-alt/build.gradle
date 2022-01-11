@@ -1,0 +1,12 @@
+// this is an alternative example for the Spring Data JPA example using JpaRepository
+dependencies {
+    implementation spring.data, misc.guava
+}
+
+jar {
+    manifest {
+        attributes("Created-By"      : "Iuliana Cosmina",
+                "Specification-Title": "Pro Spring 5",
+                "Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+    }
+}

@@ -1,0 +1,14 @@
+dependencies {
+	implementation project(':chapter02:hello-world')
+	implementation spring.context, misc.slf4jJcl, misc.logback
+	testImplementation testing.junit
+}
+
+jar {
+	manifest {
+		attributes("Created-By"         : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch3.annotated.ConstructorConfusion",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}

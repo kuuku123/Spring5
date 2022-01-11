@@ -1,0 +1,13 @@
+dependencies {
+	implementation project(':chapter02:hello-world')
+	implementation project(':chapter05:aop-hello-world')
+}
+
+jar {
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch5.SimpleBeforeAdvice",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}

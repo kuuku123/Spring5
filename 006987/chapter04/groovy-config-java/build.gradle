@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+
+dependencies {
+	implementation misc.groovy
+	implementation project(':chapter03:bean-inheritance')
+}
+
+task copyGroovyFile(type: Copy) {
+    from 'src/main/resources/beans.groovy'
+    into 'bin/main'
+}
+
+assemble.dependsOn copyGroovyFile
+
+jar {
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Main-Class"         : "com.apress.prospring5.ch4.GroovyBeansFromJava",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}

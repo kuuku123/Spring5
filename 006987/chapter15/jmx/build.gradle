@@ -1,0 +1,16 @@
+apply plugin: 'war'
+
+dependencies {
+	implementation project(':chapter12:base-remote')
+}
+
+
+war {
+	archiveName = 'jmx.war'
+	manifest {
+		attributes("Created-By"      : "Iuliana Cosmina",
+				"Specification-Title": "Pro Spring 5",
+				"Class-Path"         : configurations.runtimeClasspath.collect { it.getName() }.join(' '))
+	}
+}
+
