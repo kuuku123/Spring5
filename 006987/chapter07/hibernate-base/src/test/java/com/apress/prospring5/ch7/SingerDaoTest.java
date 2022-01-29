@@ -89,8 +89,10 @@ public class SingerDaoTest {
     public void testUpdate(){
         Singer singer = singerDao.findById(1L);
         // ID가 1인 가수가 존재하는지 체크
+        System.out.println("assertNotNull");
         assertNotNull(singer);
         // 있을 것이라 생각하는 가수가 존재하는지 확인
+        System.out.println("assertEquals");
         assertEquals("Mayer", singer.getLastName());
         // 앨범 조회
         Album album = singer.getAlbums().stream().filter(a -> a.getTitle().equals("Battle Studies")).findFirst().get();

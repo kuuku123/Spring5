@@ -1,5 +1,7 @@
 dependencies {
 	implementation project(':chapter05:simple-before-advice')
+	implementation project(':chapter02:hello-world')
+
 }
 
 jar {

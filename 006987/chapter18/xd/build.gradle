@@ -1,5 +1,8 @@
 dependencies {
-	implementation db.mysql, db.dbcp2
+	implementation db.mysql, db.dbcp2,misc.slf4jJcl
+	// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+	implementation group: 'org.springframework', name: 'spring-jdbc', version: '4.1.9.RELEASE'
+
 }
 jar {
 	manifest {

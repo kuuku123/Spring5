@@ -1,5 +1,6 @@
 dependencies {
 	implementation project(':chapter13:integration-test')
+	implementation project(':chapter13:base-test')
 	testImplementation testing.jmock
 }
 

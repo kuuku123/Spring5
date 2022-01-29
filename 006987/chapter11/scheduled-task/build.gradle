@@ -1,5 +1,8 @@
 dependencies {
 	implementation project(':chapter11:base-task')
+	// https://mvnrepository.com/artifact/org.springframework/spring-context
+	implementation group: 'org.springframework', name: 'spring-context', version: '4.1.9.RELEASE'
+
 }
 
 jar {

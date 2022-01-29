@@ -1,5 +1,8 @@
 dependencies {
-	implementation db.hsqldb,db.dbcp, db.dbcp2
+	implementation db.hsqldb,db.dbcp, db.dbcp2,misc.slf4jJcl
+	// https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core
+	implementation group: 'org.springframework.batch', name: 'spring-batch-core', version: '4.1.4.RELEASE'
+
 }
 
 jar {

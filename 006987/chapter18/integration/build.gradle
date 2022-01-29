@@ -1,5 +1,5 @@
 dependencies {
-	implementation db.h2, db.dbcp2, spring.batchIntegration, spring.integrationFile
+	implementation db.h2, db.dbcp2, spring.batchIntegration, spring.integrationFile,misc.slf4jJcl
 }
 jar {
 	manifest {

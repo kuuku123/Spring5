@@ -1,5 +1,9 @@
 dependencies {
 	implementation project(':chapter09:base-dao')
+
+// https://mvnrepository.com/artifact/com.atomikos/transactions-jta
+	implementation group: 'com.atomikos', name: 'transactions-jta', version: '5.0.8'
+
 }
 
 jar {
